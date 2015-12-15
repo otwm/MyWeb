@@ -5,8 +5,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.boot.test.OutputCapture;
 
-import static org.junit.Assert.assertTrue;
-
 /**
  * Created by kdo on 2015-12-14.
  */

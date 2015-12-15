@@ -19,6 +19,9 @@ subprojects {
     apply plugin: 'eclipse-wtp'
     apply plugin: 'idea'
 
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
     repositories {
         mavenLocal()
         mavenCentral()

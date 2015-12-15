@@ -1,0 +1,18 @@
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'core'
+    version = '0.5.0'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.data:spring-data-releasetrain:Gosling-SR1'
+    }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("com.h2database:h2")
+}
