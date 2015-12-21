@@ -41,12 +41,12 @@ public class ArticleController {
     @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
     String save(Article article, BindingResult bindingResult) {
         articleRepository.save(article);
-        return "forward:/articles";
+        return "redirect:/articles";
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     String delete(@PathVariable("id") Long id) {
         articleRepository.delete(id);
-        return "forward:/articles";
+        return "redirect:/articles";
     }
 }
