@@ -6,8 +6,23 @@
 
 <body>
 <h1>Article</h1>
-<div th:>
 
+<div>
+    <a th:href="@{/articles/form}" href="/articles/form">글쓰기</a>
 </div>
+<table>
+    <thead>
+    <tr>
+        <th>번호</th>
+        <th>글제목</th>
+    </tr>
+    </thead>
+    <tbody th:each="item:${articles}" th:remove="all-but-first">
+    <tr>
+        <td><span>1</span></td>
+        <td><span th:text="${item.title}">1</span></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

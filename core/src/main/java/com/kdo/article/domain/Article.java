@@ -27,7 +27,7 @@ public class Article {
      */
     private String content;
 
-    private Article() {
+    public Article() {
     }
 
     public Article(String title, String content) {
