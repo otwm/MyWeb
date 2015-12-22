@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/layout/default">
 <head>
     <title>Article</title>
 </head>
-
-<body>
-<h1>Article</h1>
-
-<div>
-    <a th:href="@{/articles/form}" href="/articles/form">글쓰기</a>
+<body th:with="title=${aa},operation=${bb}">
+<div layout:fragment="content">
+    123411dfef11 ${title} ${aa}
+    <span th:text="${bb}">11dfe</span>
 </div>
-<table>
-    <thead>
-    <tr>
-        <th>번호</th>
-        <th>글제목</th>
-    </tr>
-    </thead>
-    <tbody th:each="item:${articles}" th:remove="all-but-first">
-    <tr>
-        <td><span>1</span></td>
-        <td><span th:text="${item.title}">1</span></td>
-    </tr>
-    </tbody>
-</table>
 </body>
 </html>
