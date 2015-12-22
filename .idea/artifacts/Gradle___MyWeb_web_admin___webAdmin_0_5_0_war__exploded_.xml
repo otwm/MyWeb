@@ -16,13 +16,20 @@
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter:1.3.1.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-validation:1.3.1.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.6.4" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.2.4.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.2.4.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot:1.3.1.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.3.1.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.3.1.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.2.4.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.16" />
           <element id="library" level="project" name="Gradle: org.hibernate:hibernate-validator:5.2.2.Final" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.6.4" />
           <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.6.4" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.2.4.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.2.4.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.2.4.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.2.4.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.1.3" />
           <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.13" />
           <element id="library" level="project" name="Gradle: org.slf4j:jul-to-slf4j:1.7.13" />
@@ -38,6 +45,7 @@
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:8.0.30" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-logging-juli:8.0.30" />
           <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:8.0.30" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-thymeleaf:1.3.1.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE" />
           <element id="library" level="project" name="Gradle: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.3.1" />
           <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf:2.1.4.RELEASE" />
@@ -55,10 +63,18 @@
           </element>
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-jpa:1.9.1.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:1.11.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-orm:4.2.4.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.2.4.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:4.2.4.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-data-rest:1.3.1.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:1.3.1.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: com.h2database:h2:1.4.190" />
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-rest-webmvc:2.4.1.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-aop:1.3.1.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-jdbc:1.3.1.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.hibernate:hibernate-entitymanager:4.3.11.Final" />
           <element id="library" level="project" name="Gradle: javax.transaction:javax.transaction-api:1.2" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aspects:4.2.4.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-rest-core:2.4.1.RELEASE" />
           <element id="library" level="project" name="Gradle: com.github.fge:json-patch:1.7" />
           <element id="library" level="project" name="Gradle: org.aspectj:aspectjweaver:1.8.7" />
@@ -80,22 +96,6 @@
           <element id="library" level="project" name="Gradle: com.github.fge:msg-simple:1.1" />
           <element id="library" level="project" name="Gradle: com.google.guava:guava:16.0.1" />
           <element id="library" level="project" name="Gradle: com.github.fge:btf:1.2" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-thymeleaf/1.3.1.BUILD-SNAPSHOT/111b97abb3c73a52224163d7ae4b1c4c55f02457/spring-boot-starter-thymeleaf-1.3.1.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-rest/1.3.1.BUILD-SNAPSHOT/5ae01782a7a1b8823e111f7ce810453cf7ed3eed/spring-boot-starter-data-rest-1.3.1.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.3.1.BUILD-SNAPSHOT/f82598e065619a93634f0461b2a400e10b035978/spring-boot-starter-data-jpa-1.3.1.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.2.4.BUILD-SNAPSHOT/e19fb9ca3f37825d50e8832c0a4ec6312f45fa2e/spring-web-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.2.4.BUILD-SNAPSHOT/60603f17d803114732b327d08be0cd84bf05deda/spring-webmvc-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/1.3.1.BUILD-SNAPSHOT/1674bb8be8a568629402481924ed8e8c1336b839/spring-boot-starter-aop-1.3.1.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/1.3.1.BUILD-SNAPSHOT/b77ba286079519e7b9881a166c9e1a048080af27/spring-boot-starter-jdbc-1.3.1.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/4.2.4.BUILD-SNAPSHOT/7d9d6a1318ebfd7351100d7c666210c8f960120e/spring-aspects-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.2.4.BUILD-SNAPSHOT/d14dcaf6f9b5656dd530625d89c81b7e655ae2ff/spring-core-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.2.4.BUILD-SNAPSHOT/ba91a62488d19a9e014fc3b42d769558b2349467/spring-aop-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.2.4.BUILD-SNAPSHOT/b1b1fb9110de4175812410d99aa28c7d3a6ed09e/spring-beans-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.2.4.BUILD-SNAPSHOT/1a32be3c9a4f8732bd6f5eff3a5a56714fde874/spring-context-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.2.4.BUILD-SNAPSHOT/885fe57b34519efa9b3559166809a17016ab3769/spring-expression-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.2.4.BUILD-SNAPSHOT/4ec3ec4270450c3a8adbe46079b2f7fac873e176/spring-jdbc-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/4.2.4.BUILD-SNAPSHOT/dd80f2a08dbc88dad50a0983a76613d60c27ec86/spring-orm-4.2.4.BUILD-SNAPSHOT.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.2.4.BUILD-SNAPSHOT/d224efe12acffa831f58af1962751d16293f013c/spring-tx-4.2.4.BUILD-SNAPSHOT.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">
