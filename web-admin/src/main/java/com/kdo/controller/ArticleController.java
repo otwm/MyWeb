@@ -23,18 +23,19 @@ public class ArticleController {
 
     @RequestMapping(method = RequestMethod.GET)
     String list(Model model) {
-        model.addAttribute("articles", articleRepository.findAll());
+        model.addAttribute("items", articleRepository.findAll());
         return "article/articleList";
     }
 
     @RequestMapping("/form")
-    String creatForm() {
+    String creatForm(Model model) {
+        model.addAttribute("article",new Article());
         return "article/articleForm";
     }
 
     @RequestMapping("/{id}/form")
     String editform(Model model, @PathVariable(value = "id") Long id) {
-        model.addAttribute("aritcle", articleRepository.findOne(id));
+        model.addAttribute("article", articleRepository.findOne(id));
         return "article/articleForm";
     }
 

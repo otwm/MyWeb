@@ -1,16 +1,54 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/layout/default"
+      th:with="title='Article',operation='생성'">
 <head>
     <title>Article</title>
 </head>
-
 <body>
-<h1>Article</h1>
+<script type="text/javascript" layout:fragment="script">
+    $(document).ready(function () {
+        $("#btnSave").click(function (event) {
+//            event.preventDefault();
+//            alert('미구현이란다.');
+        });
+        $("#btnToList").click(function (event) {
+            event.preventDefault();
+            document.location.assign("/articles");
+        });
+        $("#btnDelete").click(function (event) {
+            event.preventDefault();
+            alert('미구현이란다.');
+        });
+    });
+</script>
+<div layout:fragment="content">
+    <form class="form-horizontal" th:action="@{/articles}" th:method="post"
+            th:object="${article}">
+        <div class="form-group">
+            <label for="title" class="col-sm-2 control-label">제목</label>
 
-<form th:action="@{/articles}" th:method="post" >
-    <input type="text" name="title"/>
-    <textarea name="content"></textarea>
-    <input th:type="submit" value="submit"/>
-</form>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="title" placeholder="제목"
+                        th:field="*{title}"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="content" class="col-sm-2 control-label">내용</label>
+
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="8" id="content" placeholder="내용"
+                          th:field="*{content}"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary" id="btnSave">저장</button>
+                <button type="submit" class="btn btn-danger" id="btnDelete">삭제</button>
+                <button type="submit" class="btn btn-default" id="btnToList">목록</button>
+            </div>
+        </div>
+    </form>
+</div>
 </body>
 </html>
