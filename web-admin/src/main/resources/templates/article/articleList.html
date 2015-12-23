@@ -1,13 +1,93 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="/layout/default">
+      layout:decorator="/layout/default"
+      th:with="title='Article',operation='리스트'">
 <head>
     <title>Article</title>
 </head>
-<body th:with="title=${aa},operation=${bb}">
+<body>
+<script type="text/javascript" layout:fragment="script">
+    $(document).ready(function () {
+        $("#btnSearch").click(function (event) {
+            event.preventDefault();
+            alert('미구현이란다.');
+        });
+        $("#btnToWrite").click(function (event) {
+            event.preventDefault();
+            document.location.assign("/articles/form");
+        });
+        $("#btnDelete").click(function (event) {
+            event.preventDefault();
+        });
+    });
+</script>
 <div layout:fragment="content">
-    123411dfef11 ${title} ${aa}
-    <span th:text="${bb}">11dfe</span>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Action Panel</div>
+        <div class="panel-body">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="title">제목</label>
+                    <input type="text" class="form-control" id="title" placeholder="제목"/>
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="content">내용</label>
+                    <input type="text" class="form-control" id="content" placeholder="내용"/>
+                </div>
+                <button type="submit" class="btn btn-default" id="btnSearch">검색</button>
+                <button type="submit" class="btn btn-primary" id="btnToWrite">글쓰기</button>
+                <button type="submit" class="btn btn-danger" id="btnDelete">삭제</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading">0 건</div>
+        <!-- Table -->
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>조회수</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>제목</td>
+                <td>글쓴이</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>제목</td>
+                <td>글쓴이</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>제목</td>
+                <td>글쓴이</td>
+                <td>1</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <nav class="text-center">
+        <ul class="pagination">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </div>
 </body>
 </html>

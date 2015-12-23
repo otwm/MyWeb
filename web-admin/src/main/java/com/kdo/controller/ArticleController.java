@@ -24,8 +24,6 @@ public class ArticleController {
     @RequestMapping(method = RequestMethod.GET)
     String list(Model model) {
         model.addAttribute("articles", articleRepository.findAll());
-        model.addAttribute("aa","121");
-        model.addAttribute("bb","test");
         return "article/articleList";
     }
 
