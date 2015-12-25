@@ -52,37 +52,51 @@
                 <th>번호</th>
                 <th>제목</th>
                 <th>글쓴이</th>
+                <th>작성일</th>
                 <th>조회수</th>
             </tr>
             </thead>
-            <tbody th:each="item:${items}" th:remove="all-but-first">
-            <tr>
-                <td>1</td>
-                <td>
-                    <a th:href="@{/articles/{id}/form(id=${item.id})}" th:text="${item.title}">제목</a>
-                </td>
-                <td>글쓴이</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>제목</td>
-                <td>글쓴이</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>제목</td>
-                <td>글쓴이</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>제목</td>
-                <td>글쓴이</td>
-                <td>1</td>
-            </tr>
-            </tbody>
+            <th:block th:if="${items != null}">
+                <tbody th:each="item:${items}" th:remove="all-but-first">
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <a th:href="@{/articles/{id}/form(id=${item.id})}" th:text="${item.title}">제목</a>
+                    </td>
+                    <td>글쓴이</td>
+                    <td th:text="${item.createdDate}"></td>
+                    <td th:text="${item.hit}">1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>제목</td>
+                    <td>글쓴이</td>
+                    <td>2015-10-01</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>제목</td>
+                    <td>글쓴이</td>
+                    <td>2015-10-01</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>제목</td>
+                    <td>글쓴이</td>
+                    <td>2015-10-01</td>
+                    <td>1</td>
+                </tr>
+                </tbody>
+            </th:block>
+            <th:block th:if="${#lists.size(items) == 0 }">
+                <tbody>
+                <tr>
+                    <td colspan="5" class="text-center">자료가 없습니다.</td>
+                </tr>
+                </tbody>
+            </th:block>
         </table>
     </div>
 
