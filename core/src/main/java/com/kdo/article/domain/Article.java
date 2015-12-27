@@ -1,14 +1,12 @@
 package com.kdo.article.domain;
 
-import javax.persistence.*;
-import java.time.ZonedDateTime;
-import java.util.Set;
-
 import com.kdo.common.domain.AbstractEntity;
 import com.kdo.common.domain.Attach;
-import com.kdo.user.domain.User;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 /**
  * 게시물

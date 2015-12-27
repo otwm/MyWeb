@@ -78,5 +78,6 @@
     <orderEntry type="library" exported="" name="Gradle: org.unbescape:unbescape:1.1.0.RELEASE" level="project" />
     <orderEntry type="module" module-name="api" exported="" />
     <orderEntry type="module" module-name="core" exported="" />
+    <orderEntry type="library" name="web-admin node_modules" level="project" />
   </component>
 </module>
