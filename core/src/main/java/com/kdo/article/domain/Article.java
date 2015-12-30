@@ -1,11 +1,8 @@
 package com.kdo.article.domain;
 
 import com.kdo.common.domain.AbstractEntity;
-import com.kdo.common.domain.Attach;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 /**
@@ -13,6 +10,7 @@ import java.util.Set;
  * Created by kdo on 2015-12-15.
  */
 @Entity
+@Table(name = "t_article")
 public class Article extends AbstractEntity {
 
     /**
@@ -33,19 +31,19 @@ public class Article extends AbstractEntity {
     /**
      * 파일
      */
-    @OneToMany(cascade = CascadeType.ALL)
-    private Set<Attach> attachs;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "article")
+    private Set<ArticleAttach> attachs;
 
     /**
      * 답글
      */
-    @OneToMany(cascade = CascadeType.ALL)
-    private Set<Article> replys;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    private Set<Article> replys;
 
     /**
      * 코멘트
      */
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "article")
     private Set<Comment> comments;
 
     public Article() {
@@ -60,54 +58,49 @@ public class Article extends AbstractEntity {
         return title;
     }
 
-    public Article setTitle(String title) {
+    public void setTitle(String title) {
         this.title = title;
-        return this;
     }
 
     public String getContent() {
         return content;
     }
 
-    public Article setContent(String content) {
+    public void setContent(String content) {
         this.content = content;
-        return this;
     }
 
     public int getHit() {
         return hit;
     }
 
-    public Article setHit(int hit) {
+    public void setHit(int hit) {
         this.hit = hit;
-        return this;
     }
 
-    public Set<Attach> getAttachs() {
+    public Set<ArticleAttach> getAttachs() {
         return attachs;
     }
 
-    public Article setAttachs(Set<Attach> attachs) {
+    public void setAttachs(Set<ArticleAttach> attachs) {
         this.attachs = attachs;
-        return this;
     }
 
-    public Set<Article> getReplys() {
-        return replys;
-    }
-
-    public Article setReplys(Set<Article> replys) {
-        this.replys = replys;
-        return this;
-    }
+//    public Set<Article> getReplys() {
+//        return replys;
+//    }
+//
+//    public Article setReplys(Set<Article> replys) {
+//        this.replys = replys;
+//        return this;
+//    }
 
     public Set<Comment> getComments() {
         return comments;
     }
 
-    public Article setComments(Set<Comment> comments) {
+    public void setComments(Set<Comment> comments) {
         this.comments = comments;
-        return this;
     }
 
 }

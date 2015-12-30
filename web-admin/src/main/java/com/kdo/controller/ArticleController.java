@@ -34,7 +34,7 @@ public class ArticleController {
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
-    String list(Model model, @PageableDefault(sort = {"id"}, value = 20, direction = Sort.Direction.DESC) Pageable pageable) {
+    String list(Model model, @PageableDefault(sort = {"id"}, value = 10, direction = Sort.Direction.DESC) Pageable pageable) {
         model.addAttribute("items", articleRepository.findAll(pageable));
         return "article/articleList";
     }

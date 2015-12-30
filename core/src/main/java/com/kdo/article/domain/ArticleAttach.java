@@ -2,22 +2,20 @@ package com.kdo.article.domain;
 
 import com.kdo.common.domain.AbstractEntity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
- * 코멘트
  * Created by kdo on 2015-12-25.
  */
 @Entity
-@Table(name = "t_comment")
-public class Comment extends AbstractEntity {
+@Table(name = "t_article_attach")
+public class ArticleAttach extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;
-
-//    @ManyToOne
-//    @JoinColumn(name="comment_id")
-//    private Comment comment;
 
     public Article getArticle() {
         return article;
@@ -25,9 +23,9 @@ public class Comment extends AbstractEntity {
 
     public void setArticle(Article article) {
         if (this.article != null) {
-            this.article.getComments().remove(this);
+            this.article.getAttachs().remove(this);
         }
         this.article = article;
-        article.getComments().add(this);
+        article.getAttachs().add(this);
     }
 }

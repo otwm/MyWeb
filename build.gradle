@@ -11,6 +11,7 @@ subprojects {
             maven { url "http://repo.spring.io/snapshot" }
         }
         dependencies {
+            classpath "io.spring.gradle:dependency-management-plugin:0.4.0.RELEASE"
             classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
             classpath 'org.springframework:springloaded:1.2.0.RELEASE'
             classpath files('lib/ojdbc14.jar')
@@ -20,6 +21,7 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'eclipse-wtp'
     apply plugin: 'idea'
+    apply plugin: "io.spring.dependency-management"
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
