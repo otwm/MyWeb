@@ -34,7 +34,7 @@ public class ArticleController {
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
-    String list(Model model, @PageableDefault(sort = {"id"}, value = 10, direction = Sort.Direction.DESC) Pageable pageable) {
+    String list(Model model, @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable) {
         model.addAttribute("items", articleRepository.findAll(pageable));
         return "article/articleList";
     }
@@ -60,7 +60,10 @@ public class ArticleController {
      */
     @RequestMapping("/{id}/form")
     String editform(Model model, @PathVariable(value = "id") Long id) {
-        model.addAttribute("article", articleRepository.findOne(id));
+        Article article = articleRepository.findOne(id);
+        article.setHit(article.getHit() + 1);
+        articleRepository.save(article);
+        model.addAttribute("article", article);
         return "article/articleForm";
     }
 

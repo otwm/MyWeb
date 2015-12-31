@@ -26,7 +26,7 @@ public class Article extends AbstractEntity {
     /**
      * 조회수
      */
-    private int hit;
+    private int hit = 1;
 
     /**
      * 파일
