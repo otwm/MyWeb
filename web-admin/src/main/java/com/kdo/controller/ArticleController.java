@@ -1,11 +1,12 @@
 package com.kdo.controller;
 
 import com.kdo.article.domain.Article;
+import com.kdo.article.domain.QArticle;
 import com.kdo.article.repository.ArticleRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
+import com.mysema.query.types.Predicate;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.querydsl.binding.QuerydslPredicate;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,8 +35,13 @@ public class ArticleController {
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
-    String list(Model model, @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable) {
-        model.addAttribute("items", articleRepository.findAll(pageable));
+    String list(
+            Model model
+            , @QuerydslPredicate(root = Article.class) Predicate predicate
+            , @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable
+    ) {
+
+        model.addAttribute("items", articleRepository.findAll(predicate, pageable));
         return "article/articleList";
     }
 
@@ -59,8 +65,7 @@ public class ArticleController {
      * @return
      */
     @RequestMapping("/{id}/form")
-    String editform(Model model, @PathVariable(value = "id") Long id) {
-        Article article = articleRepository.findOne(id);
+    String editform(Model model, @PathVariable(value = "id") Article article) {
         article.setHit(article.getHit() + 1);
         articleRepository.save(article);
         model.addAttribute("article", article);

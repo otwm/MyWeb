@@ -10,7 +10,7 @@
     $(document).ready(function () {
         $("#btnSearch").click(function (event) {
             event.preventDefault();
-            alert('미구현이란다.');
+            $("#searchForm").submit();
         });
         $("#btnToWrite").click(function (event) {
             event.preventDefault();
@@ -26,14 +26,16 @@
     <div class="panel panel-primary">
         <div class="panel-heading">Action Panel</div>
         <div class="panel-body">
-            <form class="form-inline">
+            <form class="form-inline" id="searchForm" method="get">
                 <div class="form-group">
                     <label class="sr-only" for="title">제목</label>
-                    <input type="text" class="form-control" id="title" placeholder="제목"/>
+                    <input type="text" class="form-control" id="title" placeholder="제목"
+                            name="title" th:value="${param.title != null ?param.title[0]:''}"/>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="content">내용</label>
-                    <input type="text" class="form-control" id="content" placeholder="내용"/>
+                    <input type="text" class="form-control" id="content" placeholder="내용"
+                            name="content"/>
                 </div>
                 <button type="submit" class="btn btn-default" id="btnSearch">검색</button>
                 <button type="submit" class="btn btn-primary" id="btnToWrite">글쓰기</button>
@@ -68,27 +70,6 @@
                         <td th:text="${item.createdDate}"></td>
                         <td th:text="${item.hit}">1</td>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>제목</td>
-                        <td>글쓴이</td>
-                        <td>2015-10-01</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>제목</td>
-                        <td>글쓴이</td>
-                        <td>2015-10-01</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>제목</td>
-                        <td>글쓴이</td>
-                        <td>2015-10-01</td>
-                        <td>1</td>
-                    </tr>
                     </tbody>
                 </th:block>
                 <th:block th:if="${items.totalElements == 0 }">
@@ -102,42 +83,7 @@
         </div>
     </div>
 
-    <nav class="text-center">
-        <ul class="pagination"
-            th:with="pageDisplaySize=10,prevOffset=5
-            ,isFirstPageList=${items.number - prevOffset}
-            ,start=${isFirstPageList lt 0 ? 0 : items.number - prevOffset}
-            ,isLastPageList=${start + pageDisplaySize gt items.totalPages}
-            ,end=${isLastPageList ? items.totalPages - 1: start + pageDisplaySize - 1}
-            ,currentPage=${items.number eq 0}?1:${items.number + 1}
-        ">
-            <li th:class="${disabledForLeft}? 'disabled'"
-                th:with="
-                    disabledForLeft=${items.number le 0}
-                    ,leftIink=${#httpServletRequest.getRequestURI() + '?page=' + (items.number - 1)}
-                ">
-                <a th:href="${disabledForLeft?'':leftIink}" aria-label="Previous"><span
-                        aria-hidden="true">&laquo;</span></a>
-            </li>
-            <th:block th:each="item : ${#numbers.sequence(start,end)}"
-                      th:with="isCurrent=${items.number eq item}">
-                <li th:classappend="${isCurrent}? 'active':''">
-                    <a th:href="${#httpServletRequest.getRequestURI() + '?page=' + item }">
-                        <th:block th:text="${item + 1}">1</th:block>
-                        <span class="sr-only" th:if="${isCurrent}">(current)</span></a>
-                </li>
-            </th:block>
-            <li th:class="${disabledForRight}? 'disabled'"
-                th:with="
-                    disabledForRight=${items.number + 1 ge items.totalPages }
-                    ,rightIink=${#httpServletRequest.getRequestURI() + '?page=' + (items.number + 1)}"
-                    >
-                <a th:href="${disabledForRight?'':rightIink}" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <div th:replace="/fragments/pagination :: pagination"/>
 </div>
 </body>
 </html>
