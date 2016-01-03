@@ -1,12 +1,10 @@
 package com.kdo.common.domain;
 
-import com.kdo.article.domain.Article;
 import com.kdo.user.domain.User;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.repository.Modifying;
 
 import javax.persistence.*;
 import java.time.ZonedDateTime;

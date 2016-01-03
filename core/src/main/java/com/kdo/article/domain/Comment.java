@@ -15,10 +15,6 @@ public class Comment extends AbstractEntity {
     @JoinColumn(name = "article_id")
     private Article article;
 
-//    @ManyToOne
-//    @JoinColumn(name="comment_id")
-//    private Comment comment;
-
     public Article getArticle() {
         return article;
     }

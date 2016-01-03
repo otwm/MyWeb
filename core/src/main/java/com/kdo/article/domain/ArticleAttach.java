@@ -1,6 +1,7 @@
 package com.kdo.article.domain;
 
 import com.kdo.common.domain.AbstractEntity;
+import com.kdo.common.domain.Attach;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -12,7 +13,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "t_article_attach")
-public class ArticleAttach extends AbstractEntity {
+public class ArticleAttach extends Attach {
     @ManyToOne
     @JoinColumn(name = "article_id")
     private Article article;

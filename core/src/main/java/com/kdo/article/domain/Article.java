@@ -37,8 +37,15 @@ public class Article extends AbstractEntity {
     /**
      * 답글
      */
-//    @OneToMany(cascade = CascadeType.ALL)
-//    private Set<Article> replys;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "parent")
+    private Set<Article> replys;
+
+    /**
+     * 부모글
+     */
+    @ManyToOne
+    @JoinColumn(name = "parent_id")
+    private Article parent;
 
     /**
      * 코멘트
@@ -86,15 +93,6 @@ public class Article extends AbstractEntity {
         this.attachs = attachs;
     }
 
-//    public Set<Article> getReplys() {
-//        return replys;
-//    }
-//
-//    public Article setReplys(Set<Article> replys) {
-//        this.replys = replys;
-//        return this;
-//    }
-
     public Set<Comment> getComments() {
         return comments;
     }
@@ -103,4 +101,21 @@ public class Article extends AbstractEntity {
         this.comments = comments;
     }
 
+    public Set<Article> getReplys() {
+        return replys;
+    }
+
+    public Article setReplys(Set<Article> replys) {
+        this.replys = replys;
+        return this;
+    }
+
+    public Article getParent() {
+        return parent;
+    }
+
+    public Article setParent(Article parent) {
+        this.parent = parent;
+        return this;
+    }
 }
