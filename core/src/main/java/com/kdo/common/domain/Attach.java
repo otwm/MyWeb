@@ -10,23 +10,23 @@ import java.math.BigInteger;
 @MappedSuperclass
 public class Attach extends AbstractEntity {
     /**
-     * ÀúÀå °æ·Î
+     * ê²½ë¡œ
      */
     private String path;
 
     /**
-     * ÆÄÀÏ ¸í
+     * ì´ë¦„
      */
     private String name;
 
     /**
-     * »çÀÌÁî
+     * ì‚¬ì´ì¦ˆ
      */
     @Column(name="file_size")
     private BigInteger size;
 
     /**
-     * È®ÀåÀÚ
+     * í™•ì¥ì
      */
     private String extension;
 

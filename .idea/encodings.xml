@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/build.gradle" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/core/build.gradle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/generated/com/kdo/article/domain/QComment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/java/com/kdo/common/domain/Attach.java" charset="UTF-8" />
   </component>
 </project>
