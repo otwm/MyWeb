@@ -2,8 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.3.1.BUILD-SNAPSHOT">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/1.3.1.BUILD-SNAPSHOT/spring-boot-starter-logging-1.3.1.BUILD-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.3.1.BUILD-SNAPSHOT/e54c3b0dccc7b997052e7568e8c85f7ee2eaa765/spring-boot-starter-logging-1.3.1.BUILD-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.3.1.BUILD-SNAPSHOT/aaf9a603127d9ddd4d9b8b384fa96944b5851a50/spring-boot-starter-logging-1.3.1.BUILD-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

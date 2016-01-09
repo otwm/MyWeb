@@ -9,7 +9,8 @@
             ,isFirstPageList=${items.number - prevOffset}
             ,start=${isFirstPageList lt 0 ? 0 : items.number - prevOffset}
             ,isLastPageList=${start + pageDisplaySize gt items.totalPages}
-            ,end=${isLastPageList ? items.totalPages - 1: start + pageDisplaySize - 1}
+            ,totalPage=${items.totalPages == 0?1:items.totalPages}
+            ,end=${isLastPageList ? totalPage - 1: start + pageDisplaySize - 1}
             ,currentPage=${items.number eq 0}?1:${items.number + 1}
         ">
         <li th:class="${disabledForLeft}? 'disabled'"

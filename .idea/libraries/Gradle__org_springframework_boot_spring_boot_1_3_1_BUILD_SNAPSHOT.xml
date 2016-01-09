@@ -2,8 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot:1.3.1.BUILD-SNAPSHOT">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.3.1.BUILD-SNAPSHOT/spring-boot-1.3.1.BUILD-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.3.1.BUILD-SNAPSHOT/515821be95783e6f4f5b27e17de8b01491df2cf6/spring-boot-1.3.1.BUILD-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.3.1.BUILD-SNAPSHOT/e7698878a67cef7dae3d64eaca963ebfefa2f8a0/spring-boot-1.3.1.BUILD-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

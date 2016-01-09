@@ -2,8 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.3.1.BUILD-SNAPSHOT">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.3.1.BUILD-SNAPSHOT/spring-boot-autoconfigure-1.3.1.BUILD-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.3.1.BUILD-SNAPSHOT/2f15c3fb73e9714aff8cf56a51c9754a110c0d92/spring-boot-autoconfigure-1.3.1.BUILD-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.3.1.BUILD-SNAPSHOT/a7381e512154c8d3155110f2dbac9eb768c186f4/spring-boot-autoconfigure-1.3.1.BUILD-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

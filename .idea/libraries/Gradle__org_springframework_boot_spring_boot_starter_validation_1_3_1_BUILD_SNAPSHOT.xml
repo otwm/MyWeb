@@ -2,8 +2,11 @@
   <library name="Gradle: org.springframework.boot:spring-boot-starter-validation:1.3.1.BUILD-SNAPSHOT">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-validation/1.3.1.BUILD-SNAPSHOT/spring-boot-starter-validation-1.3.1.BUILD-SNAPSHOT.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-validation/1.3.1.BUILD-SNAPSHOT/f537f97caf14d32e392b80dcc5fb70823518cf02/spring-boot-starter-validation-1.3.1.BUILD-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-validation/1.3.1.BUILD-SNAPSHOT/dfe59b4cda86011d814c5515b6ca20a6c367a430/spring-boot-starter-validation-1.3.1.BUILD-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
