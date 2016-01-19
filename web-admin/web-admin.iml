@@ -130,5 +130,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="web-admin node_modules" level="project" />
   </component>
 </module>
