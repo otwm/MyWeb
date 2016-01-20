@@ -106,6 +106,9 @@
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-rest-core:2.4.2.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:1.11.2.RELEASE" />
           <element id="library" level="module" name="Gradle: ojdbc14" module-name="web-admin" />
+          <element id="library" level="project" name="Gradle: org.mariadb.jdbc:mariadb-java-client:1.2.3" />
+          <element id="library" level="project" name="Gradle: net.java.dev.jna:jna:3.3.0" />
+          <element id="library" level="project" name="Gradle: net.java.dev.jna:jna:3.3.0:platform" />
         </element>
       </element>
       <element id="directory" name="META-INF">

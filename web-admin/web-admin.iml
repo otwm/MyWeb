@@ -130,6 +130,8 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="web-admin node_modules" level="project" />
+    <orderEntry type="library" name="Gradle: org.mariadb.jdbc:mariadb-java-client:1.2.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna:3.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna:3.3.0:platform" level="project" />
   </component>
 </module>

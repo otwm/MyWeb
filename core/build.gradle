@@ -33,6 +33,7 @@ dependencies {
     provided "com.mysema.querydsl:querydsl-apt:3.7.0"
 
     testCompile("com.h2database:h2")
+    compile('org.mariadb.jdbc:mariadb-java-client:1.3.4')
 //    compile('com.oracle:ojdbc14:10.2.0.4.0')
     compile fileTree(dir:"libs",include:"*.jar")
 }
