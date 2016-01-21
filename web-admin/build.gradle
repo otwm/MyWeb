@@ -23,9 +23,9 @@ configurations {
 
 dependencies {
     compile project(':api'), project(':core')
-
+//    compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")dd
 //TODO: 어째서 스타터 톰캣이 같이 포함될 때 문제가 되는 것일까?
     compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.3.1'
 

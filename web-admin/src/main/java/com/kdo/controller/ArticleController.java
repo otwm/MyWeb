@@ -40,7 +40,10 @@ public class ArticleController {
             , @QuerydslPredicate(root = Article.class) Predicate predicate
             , @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable
     ) {
-
+        System.out.println("test=================================");
+        System.out.println("test=================================");
+        System.out.println("test=================================");
+        System.out.println("test=================================");
         model.addAttribute("items", articleRepository.findAll(predicate, pageable));
         return "article/articleList";
     }
